@@ -1,25 +1,25 @@
 @font-face {
-  font-family: 'Lora';
-  src: url("./assets/fonts/Lora-Regular") format('Woff2');
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Regular") format('ttf');
   font-weight: 400;
 }
 
 @font-face {
-  font-family: 'Lora';
-  src: url("./assets/fonts/Lora-Medium") format('Woff2');
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Medium") format('ttf');
   font-weight: 500;
 }
 
 @font-face {
-  font-family: 'Lora';
-  src: url("./assets/fonts/Lora-SemiBold") format('Woff2');
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-SemiBold") format('ttf');
   font-weight: 600;
 }
 
 
 @font-face {
-  font-family: 'Lora';
-  src: url("./assets/fonts/Lora-Bold.woff2") format('Woff2');
+  font-family: 'Montserrat';
+  src: url("./assets/fonts/Montserrat-Bold") format('ttf');
   font-weight: 700;
 }
 
@@ -32,7 +32,7 @@
 
 html {
     box-sizing: border-box;
-    font-family: "Lora", sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 body {
@@ -40,7 +40,6 @@ body {
     background-color: var(--color-back);
     color: var(--color-text);
 }
-
 *,
 *::before,
 *::after {

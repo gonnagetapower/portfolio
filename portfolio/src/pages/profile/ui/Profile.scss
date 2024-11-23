@@ -1,0 +1,77 @@
+.profile {
+    &__container {
+        padding-top: 80px;
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+    &__content {
+        border-radius: 15px;
+        background-color: #3f3f3f;
+        padding-left: 20px;
+        padding-top: 10px;
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+    &__header {
+        display: flex;
+        gap: 15px;
+        padding-bottom: 10px;
+    }
+    &__left {
+        position: relative;
+        min-width: 250px;
+        min-height: 250px;
+        max-width: 250px;
+        max-height: 250px;
+    }
+    &__img {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    &__right {
+        flex-grow: 2;
+    }
+
+    &__title {
+        width: 100%;
+        padding-bottom: 5px;
+        margin-bottom: 15px;
+        padding: 5px;
+        background-color: #1A1A1A;
+        border-radius: 5px; 
+    }
+    &__descr {  
+        background-color: #1A1A1A;
+        padding: 15px;
+        border-radius: 5px;
+        padding-right: 20px;
+        padding-bottom: 15px;
+        margin-bottom: 10px;
+        font-size: 16px;
+        font-weight: 400;
+        letter-spacing: 1.5;
+    }
+    &__lists {
+        display: flex;
+    }
+    &__article {
+        width: fit-content;
+        background-color: #1A1A1A;
+        padding: 5px;
+        border-radius: 5px;
+    }
+}
+
+.tech {
+    background-color: #1A1A1A;
+    border-radius: 5px;
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px    ;
+}
+
+.skills {
+    width: 100%;
+}

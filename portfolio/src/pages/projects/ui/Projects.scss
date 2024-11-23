@@ -1,0 +1,224 @@
+.projects {
+    &__content {
+    height: 100vh;
+    padding: 20px;
+    padding-top: 80px;
+    padding-bottom: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 20px;
+    grid-template-areas: 
+    "ks ks ks sv sv"
+    "ks ks ks sv sv"
+    "st qz ek ek ek";
+    overflow: hidden;
+    }
+    &__item {
+        position: relative;
+        background-color: #717171;
+        border-radius: 15px;
+        overflow: hidden;
+        cursor: pointer;
+        &--kaisospeak {
+          grid-area: ks;
+          animation: leftToCenter 1s ease-in-out;
+          &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0px;
+            width: 100%;
+            height: 100%;
+            display: block;
+            background-color: #717171;
+            opacity: 0.8;
+            border-radius: 13px;
+            z-index: 2;
+            // background: linear-gradient(to top, #fff, #fff 20%, black 100%);
+            // background-repeat: no-repeat;
+            // background-size: contain;
+          }
+          &::after {
+            content: url('./../../../assets/svg/logo-kaisospeak.svg');
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            scale: 1.3;
+            font-weight: 600;
+            text-transform: uppercase;
+            z-index: 3;
+          }
+          &:hover {
+            .profile__additional {
+                transform: translateY(0);
+                transition: transform 0.5s;
+            }
+          }
+        }
+        &--service {
+            grid-area: sv;
+            animation: topToCenter 1s ease-in-out;
+            padding-bottom: 0;
+            background-color: #eaf0f1;
+            height: 100%;
+            border-radius: 30px;
+            background-image: url('./../../../assets/svg/cardBackGround.svg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: right 10%;
+        }
+        &--studyx {
+            grid-area: st;
+            animation: bottomToCenter 1s ease-in-out;
+            background-color: #fff;
+            .book-animation  {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                margin-right: -50%;
+                transform: translate(-50%, -50%);
+                svg {
+                    scale: 0.5;
+                }
+            }
+        }
+        &--quizz {
+            grid-area: qz;
+            animation: bottomToCenterFast 0.8s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 44px;
+            background-color: #fff;
+            color: #000;
+        }
+        &--etukk {
+            grid-area: ek;
+            animation: leftToRight 1s ease-in-out;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+        }
+    }
+    &__video {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+    &__additional {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100%;
+        padding-left: 10%;
+        padding-right: 10%;
+        padding-bottom: 1%;
+        text-align: center;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 1;
+        z-index: 4;
+        transform: translateY(100%);
+        transition: transform 0.7s;
+        p {
+            display: inline-block;
+            margin-top: auto;
+            padding: 15px;
+            background-color: #3f3f3f;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+            text-align: center;
+        }
+    }
+    &__article {
+        margin: 0;
+        font-family: 'Open Sans';
+        padding-top: 170px;
+        text-align: center;
+        font-size: 24px;
+        line-height: 130%;
+        font-weight: 500;
+        color: black;
+        animation: textAppear 2s 1;
+    }
+}
+
+@keyframes leftToCenter {
+    from {
+     transform: translateX(-80%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+@keyframes bottomToCenter {
+    from {
+     transform: translateY(100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes bottomToCenterFast {
+    from {
+     transform: translateY(80%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes topToCenter {
+    from {
+     transform: translateY(-80%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+
+@keyframes leftToRight {
+    from {
+        transform: translateX(50%);
+       }
+       to {
+           transform: translateX(0);
+       }
+}
+
+
+@keyframes textAppear {
+    0% {
+        color: white;
+        letter-spacing: 13px;
+        margin-top: 40px;
+    }
+    50% {
+        margin-top: -20px;
+        color: white;
+    }
+    65% {
+        margin-top: 0px;
+        letter-spacing: 7px;
+        color: black;
+    }
+}

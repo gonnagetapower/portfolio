@@ -1,0 +1,31 @@
+.contacts {
+    display: flex;
+    height: 40px;
+    border-radius: 15px;  
+    background-color: #1A1A1A;
+    width: fit-content;
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        width: 100%;
+        padding: 5px;
+        cursor: pointer;
+        .contacts__icon {
+            height: 100%;
+            width: 100%;
+            fill: rgb(77, 82, 90);
+        }
+        &:hover {
+            .contacts__icon {
+                fill: #ff9100;
+            }
+            .contacts__icon {
+                path {
+                    fill: #ff9100; 
+                }
+            }
+        }
+    }
+}
