@@ -1,3 +1,3 @@
-export * from "./intro";
-export * from "./profile";
-export * from "./projects";
+export { IntroPage } from "./intro";
+export { Profile } from "./profile";
+export { Projects } from "./projects";

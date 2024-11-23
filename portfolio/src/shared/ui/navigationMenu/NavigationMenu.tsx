@@ -8,7 +8,8 @@ import CodeIcon from '@mui/icons-material/Code';
 import WhatshotIcon from '@mui/icons-material/Whatshot';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import { useNavigate } from "react-router-dom";
-const NavigationMenu = () => {
+
+export const NavigationMenu = () => {
 
     const navigate = useNavigate();
 
@@ -24,5 +25,3 @@ const NavigationMenu = () => {
         </div>
     )
 }
-
-export default NavigationMenu;

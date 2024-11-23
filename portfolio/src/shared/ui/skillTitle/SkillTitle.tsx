@@ -6,7 +6,7 @@ interface ISkillTitleProps {
     item: string
 }
 
-const SkillTitle: React.FC<ISkillTitleProps> = ({ index, item }) => {
+export const SkillTitle: React.FC<ISkillTitleProps> = ({ index, item }) => {
 
     return (
         <li
@@ -16,5 +16,3 @@ const SkillTitle: React.FC<ISkillTitleProps> = ({ index, item }) => {
         </li>
     )
 }
-
-export default SkillTitle;

@@ -2,13 +2,11 @@ import './App.css'
 import { Router } from './app/routes'
 
 const App = () => {
-
-
   return (
-    <div>
+    <div >
       <Router />
     </div >
   )
 }
 
-export default App
+export default App;

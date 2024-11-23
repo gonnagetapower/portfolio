@@ -1,6 +1,6 @@
 import React from 'react';
 import { Outlet } from "react-router";
-import NavigationMenu from 'src/shared/ui/navigationMenu/NavigationMenu';
+import {NavigationMenu} from '@shared/index.tsx';
 
 const MainLayout = () => {
     return (

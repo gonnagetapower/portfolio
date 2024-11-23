@@ -1,2 +1,3 @@
-export * from "./skillTitle/SkillTitle";
-export * from "./contacts/Contatcs";
+export { SkillTitle } from "./skillTitle/SkillTitle";
+export { NavigationMenu } from "./navigationMenu/NavigationMenu";
+export { Contacts } from "./contacts/Contatcs";

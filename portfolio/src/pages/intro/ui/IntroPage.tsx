@@ -1,16 +1,15 @@
 import React, { useEffect, useState } from "react"
 
 import './IntroPage.scss';
-import SkillTitle from "src/shared/ui/skillTitle/SkillTitle";
-//import NavigationMenu from "src/shared/ui/navigationMenu/NavigationMenu";
+import { SkillTitle } from "@shared/index.tsx";
 
 export const IntroPage: React.FC = () => {
 
     const [skillsList, setSkillsList] = useState<string[]>(['Frontend developer', 'Backend developer', 'Fullstack developer', 'Mobile developer']);
 
     useEffect(() => {
-        let newList = skillsList.slice(1);
-        let firstElem = skillsList[0];
+        const newList = skillsList.slice(1);
+        const firstElem = skillsList[0];
         for (let i = 0; i < skillsList.length; i++) {
             const timeout = setTimeout(() => {
                 if (firstElem) {
