@@ -4,9 +4,13 @@ import './Profile.scss';
 
 import myPhoto from './../../../assets/img/me.jpg';
 import { Contacts } from "@shared/*";
+import { useNavigate } from "react-router-dom";
 
 
 export const Profile = () => {
+
+    const navigate = useNavigate()
+
     return (
         <div className="profile">
             <div className="profile__container">
@@ -19,11 +23,12 @@ export const Profile = () => {
                             <h2 className="profile__title">Карпов Александр</h2>
                             <Contacts />
                             <p className="profile__descr">
-                                {/* Frontend developer более чем с 2 годами опыта в различных проектах.
+                                Всем привет!  <span className="profile__emoji">👋</span> Frontend developer более чем с 2 годами опыта в разнообразных проектах.
                                 Имею опыт, как на фрилансе так и в команде разработчиков.
-                                Специализируюсь как на классической верстке, так и на построении современных web-приложений.
-                                В данный момент работаю на позиции fullstack-разработчика, по всем вопросам обращаться в telegram. */}
-                                Ничто в настоящей Декларации не может быть истолковано, как предоставление какомулибо государству, группе лиц или отдельным лицам права заниматься какойлибо деятельностью или совершать действия, направленные к уничтожению прав и свобод, изложенных в настоящей Декларации. Принимая во внимание, что признание достоинства, присущего всем членам человеческой семьи, и равных и неотъемлемых прав их является основой свободы, справедливости и всеобщего мира; и
+                                Специализируюсь на построении одностраничных веб-приложений (SPA).
+                                Примеры работ можете посмотреть на <span onClick={() => navigate('/projects')} className="profile__link">следующей</span> странице. 
+                                Углубляю свои знания в построении клиентских приложений и изучаю мобильную платформу.
+                                В данный момент работаю на позиции fullstack-разработчика, по всем вопросам обращаться в <a href='https://t.me/gonnagetapower' target="_blank" className="profile__link">telegram</a>.
                             </p>
                         </div>
                     </div>
@@ -31,8 +36,8 @@ export const Profile = () => {
                         <h2 className="profile__title">Навыки:</h2>
                         <div className="profile__lists">
                             <div className="skills">
-                                <article className="profile__article">Что умею</article>
-                                <ul className="tech">
+                                <article className="profile__article">Что умею:</article>
+                                <ul className="list-reset tech">
                                     <li className="tech__item">JavaScript/TypeScript</li>
                                     <li className="tech__item">ReactJS</li>
                                     <li className="tech__item">NodeJs</li>
@@ -45,13 +50,17 @@ export const Profile = () => {
                                 </ul>
                             </div>
                             <div className="skills">
-                                <article className="profile__article">Что изучаю</article>
-                                <ul className="tech">
+                                <article className="profile__article">Что изучаю:</article>
+                                <ul className="list-reset tech tech--reverse">
                                     <li className="tech__item">Dart</li>
                                     <li className="tech__item">Flutter</li>
+                                    <li className="tech__item">NestJS</li>
                                     <li className="tech__item">NextJS</li>
+                                    <li className="tech__item">Styled components</li>
                                     <li className="tech__item">FSD</li>
                                     <li className="tech__item">MVVM</li>
+                                    <li className="tech__item">Clean Arhitecture</li>
+                                    <li className="tech__item">Algoritms</li>
                                 </ul>
                             </div>
                         </div>
