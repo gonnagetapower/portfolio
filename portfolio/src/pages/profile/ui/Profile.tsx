@@ -3,9 +3,10 @@ import React from "react";
 import './Profile.scss';
 
 import myPhoto from './../../../assets/img/me.jpg';
-import { Contacts } from "@shared/*";
+import { Contacts, TechItem } from "@shared/*";
 import { useNavigate } from "react-router-dom";
 
+import {techsKnow, techsStudy} from "./../../../utils/techsArray";
 
 export const Profile = () => {
 
@@ -26,7 +27,7 @@ export const Profile = () => {
                                 Всем привет!  <span className="profile__emoji">👋</span> Frontend developer более чем с 2 годами опыта в разнообразных проектах.
                                 Имею опыт, как на фрилансе так и в команде разработчиков.
                                 Специализируюсь на построении одностраничных веб-приложений (SPA).
-                                Примеры работ можете посмотреть на <span onClick={() => navigate('/projects')} className="profile__link">следующей</span> странице. 
+                                Примеры работ можете посмотреть на <span onClick={() => navigate('/projects')} className="profile__link">следующей</span> странице.
                                 Углубляю свои знания в построении клиентских приложений и изучаю мобильную платформу.
                                 В данный момент работаю на позиции fullstack-разработчика, по всем вопросам обращаться в <a href='https://t.me/gonnagetapower' target="_blank" className="profile__link">telegram</a>.
                             </p>
@@ -38,29 +39,17 @@ export const Profile = () => {
                             <div className="skills">
                                 <article className="profile__article">Что умею:</article>
                                 <ul className="list-reset tech">
-                                    <li className="tech__item">JavaScript/TypeScript</li>
-                                    <li className="tech__item">ReactJS</li>
-                                    <li className="tech__item">NodeJs</li>
-                                    <li className="tech__item">Express</li>
-                                    <li className="tech__item">BEM</li>
-                                    <li className="tech__item">PixelPerfect</li>
-                                    <li className="tech__item">SCSS</li>
-                                    <li className="tech__item">Redux-toolkit</li>
-                                    <li className="tech__item">Socket.io</li>
+                                    {techsKnow.map((item: string) => (
+                                        <TechItem techTitle={item} />
+                                    ))}
                                 </ul>
                             </div>
                             <div className="skills">
                                 <article className="profile__article">Что изучаю:</article>
                                 <ul className="list-reset tech tech--reverse">
-                                    <li className="tech__item">Dart</li>
-                                    <li className="tech__item">Flutter</li>
-                                    <li className="tech__item">NestJS</li>
-                                    <li className="tech__item">NextJS</li>
-                                    <li className="tech__item">Styled components</li>
-                                    <li className="tech__item">FSD</li>
-                                    <li className="tech__item">MVVM</li>
-                                    <li className="tech__item">Clean Arhitecture</li>
-                                    <li className="tech__item">Algoritms</li>
+                                        {techsStudy.map((item: string) => (
+                                        <TechItem techTitle={item} />
+                                    ))}
                                 </ul>
                             </div>
                         </div>

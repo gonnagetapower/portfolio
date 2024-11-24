@@ -11,6 +11,7 @@ export default defineConfig({
       src: 'src',
       shared: 'shared',
       pages: 'pages',
+      utils: 'utils'
     }
   },
 })

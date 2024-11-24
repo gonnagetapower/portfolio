@@ -15,6 +15,7 @@
         padding-right: 20px;
         padding-bottom: 10px;
         overflow: hidden;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     &__header {
@@ -35,6 +36,7 @@
         height: 100%;
         width: 100%;
         border-radius: 50%;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     &__right {
@@ -48,6 +50,7 @@
         padding: 10px;
         background-color: #1A1A1A;
         border-radius: 5px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     &__descr {
@@ -63,6 +66,7 @@
         font-weight: 400;
         letter-spacing: 1.5;
         text-indent: 15px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     &__article {
@@ -73,6 +77,7 @@
         margin-bottom: 10px;
         width: 120px;
         text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
     }
 
     &__emoji {
@@ -127,27 +132,6 @@
     &--reverse {
         animation: run 25s linear infinite reverse;
     }
-
-    &__item {
-        display: inline-block;
-        border-radius: 5px;
-        padding: 6px 25px;
-        height: 37px;
-        background-color: #1A1A1A;
-        font-weight: 700;
-        font-size: 18px;
-        text-align: center;
-        color: #fff;
-        margin-right: 15px;
-        margin-bottom: 15px;
-        min-width: 240px;
-        max-width: 240px;
-        
-        &:hover {
-            color: #ff9100 !important;
-        }
-    }
-
     &:hover {
         animation-play-state: paused;
         cursor: pointer;

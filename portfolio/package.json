@@ -40,6 +40,9 @@
   "paths": {
     "@shared/*": [
       "shared/*"
+    ],
+    "@utils/*": [
+      "utils/*"
     ]
   }
 }

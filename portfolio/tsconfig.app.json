@@ -17,7 +17,8 @@
     "paths": {
       "src/*": ["src/"],
       "@shared/*": ["src/shared"],
-      "@pages/*": ["src/pages"]
+      "@pages/*": ["src/pages"],
+      "@utils/*": ["src/utils"]
     },
     /* Linting */
     "strict": true,
