@@ -1,5 +1,5 @@
 .navigation-menu {
-    position: absolute;
+    position: fixed;
     bottom: 5%;
     left: 50%;
     right: 0;
@@ -13,8 +13,8 @@
     &__list {
         height: 100%;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: center;
         padding: 10px 15px 10px 15px !important;
         gap: 5px;
     }

@@ -1,62 +1,88 @@
 .intro-page {
-    user-select: none;
-    text-align: center;
-    height: 100vh;
-    width: 100vw;
+  user-select: none;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &__content {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    &__content {
-        display: flex;
-        gap: 15px;
-    }
-    &__title {
-        font-size: 68px;
-    }
-    .direction-list {
-        display: flex;
-        align-items: start;
-        flex-direction: column;
-        margin-top: -10px;
-        animation: infoAppear 2s;
-        overflow: hidden;
-        max-height: 400px;
+    gap: 15px;
+  }
+  &__title {
+    font-size: 68px;
+  }
+  .direction-list {
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    margin-top: -10px;
+    animation: infoAppear 2s;
+    //overflow: hidden;
+    max-height: 400px;
     &__item {
-        position: relative;
-        font-size: 44px;
-        font-weight: 600;
-        padding-right: 5px;
-        z-index: 2;
-        //animation: skillTitle 1s;
-        &--active {
-            background-color: #ff9100;
-            font-style: italic;
-        }
-        &:nth-child(1) {
-            opacity: 0.2;
-        }
-        &:nth-child(3) {
-            opacity: 0.5;
-        }
-        &:nth-child(4) {
-            opacity: 0.1;
-        }   
+      position: relative;
+      font-size: 44px;
+      font-weight: 600;
+      min-width: 450px;
+      padding-right: 5px;
+      text-align: start;
+      z-index: 2;
+      //animation: skillTitle 1s;
+      &--active {
+        background-color: #ff9100;
+        font-style: italic;
+      }
+      &:nth-child(1) {
+        opacity: 0.2;
+      }
+      &:nth-child(3) {
+        opacity: 0.5;
+      }
+      &:nth-child(4) {
+        opacity: 0.1;
+      }
     }
-    }
+  }
 }
 
-
-
 @keyframes infoAppear {
-    from {
-        z-index: -1;
-        transform: translateY(-100%);
-        opacity: 0;
-    }
+  from {
+    z-index: -1;
+    transform: translateY(-100%);
+    opacity: 0;
+  }
 
-    to {
-        z-index: 1;
-        transform: translateY(0);
-        opacity: 1;
+  to {
+    z-index: 1;
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .intro-page {
+    &__title {
+      margin: 0;
+      font-size: 64px;
+      background-color: #1a1a1a;
+      z-index: 2;
     }
+    .dash {
+      display: none;
+    }
+    &__content {
+      flex-direction: column;
+    }
+    .direction-list {
+      z-index: 1;
+      margin: 0 auto;
+      &__item {
+        font-size: 22px;
+        min-width: 300px;
+        text-align: center;
+      }
+    }
+  }
 }

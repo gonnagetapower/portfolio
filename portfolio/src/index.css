@@ -41,6 +41,24 @@ body {
     background-color: var(--color-back);
     color: var(--color-text);
     font-family: 'Montserrat';
+    &::-webkit-scrollbar {
+      margin: 50px !important;
+  width: 10px;
+  scrollbar-color: #ff9100 #3f3f3f;
+  scrollbar-width: 5px;
+}
+
+&::-webkit-scrollbar-track {
+  background: #3f3f3f;
+  margin: 50px !important;
+}
+
+&::-webkit-scrollbar-thumb {
+  background-color: #ff9100;
+  max-height: 10px;
+  min-height: 5px;
+  width: 5px;
+}
 }
 *,
 *::before,
