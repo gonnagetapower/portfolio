@@ -1,4 +1,4 @@
-@import '../../../mixins/onHover.scss';
+
 
 .contacts {
     display: flex;
@@ -25,16 +25,6 @@
             height: 100%;
             width: 100%;
             fill: rgb(77, 82, 90);
-        }
-        @include onHover {
-            .contacts__icon {
-                fill: var(--accent-color);
-            }
-            .contacts__icon {
-                path {
-                    fill: var(--accent-color); 
-                }
-            }
         }
     }
 }
