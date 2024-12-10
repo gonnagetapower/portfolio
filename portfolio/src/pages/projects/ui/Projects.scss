@@ -216,10 +216,11 @@
     }
 
     .project__center {
+      display: block;
       border-radius: 15px;
       background-color: var(--secondary-color);
       padding: 20px;
-      overflow: hidden;
+      //overflow: hidden;
       animation: bottomToCenter 1.2s;
       max-height: 800px;
       height: 100%;

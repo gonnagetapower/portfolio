@@ -252,6 +252,7 @@ export const Projects = () => {
               <video
                 className="project__video"
                 muted
+                controls
                 ref={videoRef as React.RefObject<HTMLVideoElement>}
               >
                 <source src={quizVideo} type="video/mp4" />
