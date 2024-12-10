@@ -9,6 +9,7 @@ interface AuxProps {
 
 const Modal: React.FC<AuxProps> = ({ children, closeModal }) => {
   //@ts-ignore
+  
   useEffect(() => {
     document.body.style.overflow = "hidden";
     return () => (document.body.style.overflow = "unset");
