@@ -1,5 +1,3 @@
-import React from "react";
-
 import TelegramIcon from './../../../assets/svg/telegram.svg?react';
 import PDFIcon from './../../../assets/svg/pdf-icon.svg?react';
 import Pdf from './../../../assets/pdf/sample.pdf';

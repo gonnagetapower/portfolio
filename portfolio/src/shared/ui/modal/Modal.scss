@@ -13,7 +13,6 @@
     animation: fadeIn 0.4s ease both;
 
     &__content {
-        overflow: hidden;
         z-index: 101;
         margin: 0 auto;
         width: 60%;
@@ -21,7 +20,10 @@
         //min-height: 463px;
         border-radius: 5px;
         box-shadow: 0 7px 134px 0 rgba(62, 113, 236, 0.05);
-        background: #fff;
+        background: var(--secondary-color);
+        &--scaled {
+            transform: scale(1.5);
+        }
     }
 }
 

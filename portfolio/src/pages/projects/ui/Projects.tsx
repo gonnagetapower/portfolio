@@ -27,7 +27,6 @@ import "swiper/css/pagination";
 import useWindowDimensions from "src/hooks/useWindowDimensions";
 import { createPortal } from "react-dom";
 import Modal from "src/shared/ui/modal/Modal";
-import { TRUE } from "sass";
 
 export const Projects = () => {
   const refProjects = useRef<HTMLDivElement>();
@@ -51,7 +50,7 @@ export const Projects = () => {
   const [counterScroll, setCounterScroll] = useState(0);
   const [disableScroll, setDisableScroll] = useState(false);
   const [modalActive, setModalActive] = useState(false);
-  const [modalImg, setModalImg] = useState('');
+  const [modalImg, setModalImg] = useState("");
   //@ts-ignore
   //   Element.prototype.scrollIntoViewPromise = function (options) {
   //     this.scrollIntoView(options);
@@ -190,22 +189,58 @@ export const Projects = () => {
             </div>
           </div>
           <div className="project__right">
-            <div className="project__img">
-              <img src={mainImg} />
-            </div>
-            <ul className="list-reset img-list">
-              {bgImages
-                .filter((img) => img !== mainImg)
-                .map((img, index) => (
-                  <li
-                    key={index}
-                    className="img-list__item"
-                    onClick={() => handleImg(setMainImg, img)}
+            {width > 1300 ? (
+              <>
+                <div className="project__img">
+                  <img src={mainImg} />
+                </div>
+                <ul className="list-reset img-list">
+                  {bgImages
+                    .filter((img) => img !== mainImg)
+                    .map((img, index) => (
+                      <li
+                        key={index}
+                        className="img-list__item"
+                        onClick={() => handleImg(setMainImg, img)}
+                      >
+                        <img src={img} alt="Subscriptipn page screen" />
+                      </li>
+                    ))}
+                </ul>
+              </>
+            ) : (
+              <div className="kaisospeak-swiper">
+                <Swiper
+                  pagination={true}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide
+                    onClick={() => handleImg(setMainImg, KSDashboard)}
                   >
-                    <img src={img} alt="Subscriptipn page screen" />
-                  </li>
-                ))}
-            </ul>
+                    <img src={KSDashboard} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={KSSubs}
+                      onClick={() => handleImg(setMainImg, KSSubs)}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={KSconnections}
+                      onClick={() => handleImg(setMainImg, KSconnections)}
+                    />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={KShero}
+                      onClick={() => handleImg(setMainImg, KShero)}
+                    />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            )}
           </div>
         </section>
         <section
@@ -347,22 +382,44 @@ export const Projects = () => {
             </div>
           </div>
           <div className="project__right">
-            <div className="project__img">
-              <img src={mainCorImg} />
-            </div>
-            <ul className="list-reset img-list">
-              {corImages
-                .filter((img) => img !== mainCorImg)
-                .map((img, index) => (
-                  <li
-                    key={index}
-                    className="img-list__item"
-                    onClick={() => setMainCorImg(img)}
-                  >
-                    <img src={img} alt="Subscriptipn page screen" />
-                  </li>
-                ))}
-            </ul>
+            {width > 1300 ? (
+              <>
+                <div className="project__img">
+                  <img src={mainCorImg} />
+                </div>
+                <ul className="list-reset img-list">
+                  {corImages
+                    .filter((img) => img !== mainCorImg)
+                    .map((img, index) => (
+                      <li
+                        key={index}
+                        className="img-list__item"
+                        onClick={() => setMainCorImg(img)}
+                      >
+                        <img src={img} alt="Subscriptipn page screen" />
+                      </li>
+                    ))}
+                </ul>
+              </>
+            ) : (
+              <div className="kaisospeak-swiper">
+                <Swiper
+                  pagination={true}
+                  modules={[Pagination]}
+                  className="mySwiper"
+                >
+                  <SwiperSlide onClick={() => handleImg(setMainImg, Kor1)}>
+                    <img src={Kor1} />
+                  </SwiperSlide>
+                  <SwiperSlide>
+                    <img
+                      src={Kor2}
+                      onClick={() => handleImg(setMainImg, Kor2)}
+                    />
+                  </SwiperSlide>
+                </Swiper>
+              </div>
+            )}
             <p className="post-scriptum">
               *Изображения не отображают реальный функционал приложения,
               демонстрация приложения по запросу.
@@ -419,7 +476,7 @@ export const Projects = () => {
           </div>
           <div className="project__right">
             <div className="project__img">
-              <img src={Flutter} alt="Subscriptipn page screen" />
+              <img src={Flutter} alt="Subscriptipn page screen" onClick={() => handleImg(setMainImg, Flutter)}/>
             </div>
           </div>
         </section>

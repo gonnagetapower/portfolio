@@ -20,11 +20,11 @@
         }
         &:hover {
             .contacts__icon {
-                fill: #ff9100;
+                fill: var(--accent-color);
             }
             .contacts__icon {
                 path {
-                    fill: #ff9100; 
+                    fill: var(--accent-color); 
                 }
             }
         }

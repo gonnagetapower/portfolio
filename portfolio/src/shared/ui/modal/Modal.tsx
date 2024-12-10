@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 
 import "./Modal.scss";
 
@@ -14,9 +14,18 @@ const Modal: React.FC<AuxProps> = ({ children, closeModal }) => {
     return () => (document.body.style.overflow = "unset");
   }, []);
 
+  const [scale, setScale] = useState(false);
+
+  const handleClickImg = (e: React.SyntheticEvent) => {
+    e.stopPropagation();
+    setScale(!scale);
+  };
+
   return (
     <div className="modal" onClick={closeModal}>
-      <div className="modal__content" onClick={(e) => e.stopPropagation()}>{children}</div>
+      <div className={scale ? "modal__content modal__content--scaled" : "modal__content"} onClick={(e) => handleClickImg(e)}>
+        {children}
+      </div>
     </div>
   );
 };

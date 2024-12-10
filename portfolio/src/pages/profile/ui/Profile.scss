@@ -9,7 +9,7 @@
 
   &__content {
     border-radius: 15px;
-    background-color: #3f3f3f;
+    background-color: var(--secondary-color);
     padding-left: 20px;
     padding-top: 10px;
     padding-right: 20px;
@@ -91,7 +91,7 @@
 
   &__link {
     position: relative;
-    color: #ff9100;
+    color: var(--accent-color);
     font-style: italic;
     cursor: pointer;
 
@@ -102,7 +102,7 @@
       height: 1px;
       bottom: 1px;
       left: 0;
-      background-color: #ff9100;
+      background-color: var(--accent-color);
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);

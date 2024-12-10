@@ -10,17 +10,17 @@
   &::-webkit-scrollbar {
     margin: 50px !important;
     width: 10px;
-    scrollbar-color: #ff9100 #3f3f3f;
+    scrollbar-color: var(--accent-color) var(--secondary-color);
     scrollbar-width: 5px;
   }
 
   &::-webkit-scrollbar-track {
-    background: #3f3f3f;
+    background: var(--secondary-color);
     margin: 50px !important;
   }
 
   &::-webkit-scrollbar-thumb {
-    background-color: #ff9100;
+    background-color: var(--accent-color);
     max-height: 10px;
     min-height: 5px;
     width: 5px;
@@ -36,7 +36,7 @@
   &__left {
     flex-basis: 1;
     border-radius: 15px;
-    background-color: #3f3f3f;
+    background-color: var(--secondary-color);
     padding: 20px;
     overflow: hidden;
     animation: bottomToCenter 1.2s;
@@ -65,7 +65,7 @@
   &__link {
     position: relative;
     display: inline-block;
-    color: #ff9100;
+    color: var(--accent-color);
     font-style: italic;
     cursor: pointer;
 
@@ -76,7 +76,7 @@
       height: 1px;
       bottom: 1px;
       left: 0;
-      background-color: #ff9100;
+      background-color: var(--accent-color);
       visibility: hidden;
       -webkit-transform: scaleX(0);
       transform: scaleX(0);
@@ -215,7 +215,7 @@
 
     .project__center {
       border-radius: 15px;
-      background-color: #3f3f3f;
+      background-color: var(--secondary-color);
       padding: 20px;
       overflow: hidden;
       animation: bottomToCenter 1.2s;
@@ -266,7 +266,7 @@
       width: 8px;
       height: 8px;
       border-radius: 100%;
-      background-color: #ff9100;
+      background-color: var(--accent-color);
     }
   }
 }
@@ -274,6 +274,15 @@
 .swiper {
   width: 100%;
   height: 100%;
+}
+
+.kaisospeak-swiper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+  z-index: 3;
 }
 
 .swiper-slide {
@@ -290,6 +299,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  max-width: fit-content;
 }
 
 @media screen and (max-width: 1300px) {

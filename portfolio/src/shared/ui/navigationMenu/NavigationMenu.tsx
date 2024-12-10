@@ -1,32 +1,38 @@
-import React from "react";
-
 import "./NavigationMenu.scss";
 
 import HomeIcon from "@mui/icons-material/Home";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CodeIcon from "@mui/icons-material/Code";
-import { useNavigate } from "react-router-dom";
+import { NavLink} from "react-router-dom";
 
 export const NavigationMenu = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="navigation-menu">
       <ul className="navigation-menu__list list-reset">
-        <li onClick={() => navigate("/")} className="navigation-menu__item">
-          <HomeIcon />
+        <li className="navigation-menu__item">
+          <NavLink
+            to="/"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <HomeIcon />
+          </NavLink>
         </li>
-        <li
-          onClick={() => navigate("/profile")}
-          className="navigation-menu__item"
-        >
-          <AccountCircleIcon />
+        <li className="navigation-menu__item">
+          <NavLink
+            to="/profile"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <AccountCircleIcon />
+          </NavLink>
         </li>
-        <li
-          onClick={() => navigate("/projects")}
-          className="navigation-menu__item"
-        >
-          <CodeIcon />
+        <li className="navigation-menu__item">
+          <NavLink
+            to="/projects"
+            className={({ isActive }) => (isActive ? "active" : "")}
+          >
+            <CodeIcon />
+          </NavLink>
         </li>
       </ul>
     </div>
