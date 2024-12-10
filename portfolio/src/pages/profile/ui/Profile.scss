@@ -110,7 +110,7 @@
       transition: all 0.3s ease-in-out 0s;
     }
 
-    &:hover {
+    @include onHover {
       &::before {
         visibility: visible;
         -webkit-transform: scaleX(1);
@@ -135,7 +135,7 @@
   &--reverse {
     animation: run 25s linear infinite reverse;
   }
-  &:hover {
+  @include onHover {
     animation-play-state: paused;
     cursor: pointer;
   }

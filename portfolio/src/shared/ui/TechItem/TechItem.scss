@@ -1,3 +1,5 @@
+@import '../../../mixins/onHover.scss';
+
 
 .tech-item {
     display: inline-block;
@@ -14,7 +16,7 @@
     min-width: 240px;
     max-width: 240px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-    &:hover {
+    @include onHover {
         color: var(--accent-color) !important;
     }
 }

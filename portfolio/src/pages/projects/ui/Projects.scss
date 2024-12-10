@@ -1,3 +1,5 @@
+@import '../../../mixins/onHover.scss';
+
 .projects {
   overflow-y: scroll;
   height: 100vh;
@@ -84,7 +86,7 @@
       transition: all 0.3s ease-in-out 0s;
     }
 
-    &:hover {
+    @include onHover {
       &::before {
         visibility: visible;
         -webkit-transform: scaleX(1);
@@ -148,7 +150,7 @@
         transition: background-color 0.3s;
       }
 
-      &:hover {
+      @include onHover {
         &::before {
           background-color: #717171;
         }
@@ -220,6 +222,7 @@
       overflow: hidden;
       animation: bottomToCenter 1.2s;
       max-height: 800px;
+      height: 100%;
     }
 
     .project__right {

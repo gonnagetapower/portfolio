@@ -1,0 +1,7 @@
+@mixin onHover {
+    @media (any-hover: hover) {
+      @include onHover {
+        @content;
+      }
+    }
+  }
